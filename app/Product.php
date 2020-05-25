@@ -9,9 +9,9 @@ class Product extends Model
         $this->stock->each->track();
     }
 
-    public function inStock(): bool
+    public function inStock()
     {
-        return $this->stock()->where("in_stock", true)->exists();
+        return $this->stock()->where('in_stock', true)->exists();
     }
 
     public function stock()
